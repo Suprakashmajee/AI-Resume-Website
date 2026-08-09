@@ -24,9 +24,13 @@ Wait for DNS propagation, then confirm https://digishops.in loads DigiShops Resu
 
 ## 3) AdSense
 
-1. Apply with site URL `https://digishops.in`
-2. After approval, set env vars and rebuild (see README)
-3. Place ads only on marketing chrome — never inside the printable resume sheet (already excluded via `.no-print`)
+Publisher script is already included:
+
+`ca-pub-9146006984034713`
+
+1. Verify site `https://digishops.in` in AdSense
+2. Optional: add display unit slot IDs via `VITE_ADSENSE_SLOT_*` and rebuild
+3. Ads stay outside the printable resume sheet (`.no-print`)
 
 ## 4) Optional Gemini AI
 

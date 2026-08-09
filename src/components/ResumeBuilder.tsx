@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import AdSenseBanner from './AdSenseBanner';
 import ResumePreview from './ResumePreview';
+import { ADSENSE_SLOT_SIDEBAR } from '../adsense';
 import {
   emptyEducation,
   emptyExperience,
@@ -372,7 +373,7 @@ export default function ResumeBuilder({ adsReady }: Props) {
 
             <AdSenseBanner
               ready={adsReady}
-              slot={import.meta.env.VITE_ADSENSE_SLOT_SIDEBAR}
+              slot={ADSENSE_SLOT_SIDEBAR}
               placement="sidebar"
             />
           </div>

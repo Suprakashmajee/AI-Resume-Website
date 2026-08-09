@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { ADSENSE_CLIENT_ID } from '../adsense';
 
 type AdSenseBannerProps = {
   ready: boolean;
@@ -13,31 +14,32 @@ declare global {
 }
 
 /**
- * Renders a real AdSense unit when VITE_ADSENSE_CLIENT_ID (+ slot) are set.
- * Otherwise shows a labeled placeholder so layout is ready before approval.
+ * Renders a real AdSense unit when a slot ID is configured.
+ * Publisher script (ca-pub-…) loads site-wide for Auto ads even without slots.
  */
 export default function AdSenseBanner({ ready, slot, placement }: AdSenseBannerProps) {
   const pushed = useRef(false);
-  const client = (import.meta.env.VITE_ADSENSE_CLIENT_ID as string | undefined)?.trim();
-  const hasConfig = Boolean(client?.startsWith('ca-pub-') && slot);
+  const client = ADSENSE_CLIENT_ID;
+  const hasSlot = Boolean(slot?.trim());
 
   useEffect(() => {
-    if (!ready || !hasConfig || pushed.current) return;
+    if (!ready || !hasSlot || pushed.current) return;
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
       pushed.current = true;
     } catch {
       // Ad blockers / unapproved accounts may throw — ignore in UI
     }
-  }, [ready, hasConfig]);
+  }, [ready, hasSlot]);
 
-  if (!hasConfig) {
+  if (!hasSlot) {
     return (
       <div
         className="no-print flex min-h-[90px] items-center justify-center rounded-xl border border-dashed border-[var(--line)] bg-white/50 px-4 text-center text-xs font-semibold text-[var(--ink-soft)]"
         aria-label="AdSense placeholder"
       >
-        Google AdSense slot ({placement}) — add VITE_ADSENSE_CLIENT_ID and slot in .env after approval
+        Google AdSense ({placement}) — Auto ads enabled for {client}. Add a display ad unit slot
+        ID to show a fixed banner here.
       </div>
     );
   }
