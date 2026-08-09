@@ -1,0 +1,10 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+hostinger_upload.zip
+public/hostinger_upload.zip
