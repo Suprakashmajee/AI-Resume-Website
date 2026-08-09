@@ -50,23 +50,23 @@ export const emptyEducation = (): EducationItem => ({
 export const sampleResume = (): ResumeData => ({
   fullName: 'Suprakash Majee',
   headline: 'Full-Stack Developer · Product Builder',
-  email: 'hello@digishops.in',
+  email: 'hello@airesumedraft.com',
   phone: '+91 95643 27643',
   location: 'Bengaluru, India',
-  website: 'https://digishops.in',
+  website: 'https://airesumedraft.com',
   summary:
-    'Product-minded developer who ships useful web tools for small businesses. Experienced building client-side generators, PDF workflows, and AI-assisted editing experiences.',
+    'Product-minded developer who ships useful web tools for job seekers. Experienced building client-side generators, PDF workflows, and AI-assisted editing experiences.',
   skills: 'React, TypeScript, Vite, Tailwind CSS, Node.js, Gemini API, PDF generation, Hostinger deployment',
   experience: [
     {
       id: crypto.randomUUID(),
-      company: 'DigiShops',
+      company: 'Airesumedraft',
       role: 'Founder & Developer',
       location: 'Bengaluru',
       start: '2024',
       end: 'Present',
       bullets:
-        'Built Bill Store invoice generator with country-specific tax templates and instant PDF export.\nDesigned and launched AI Resume builder with live preview and Hostinger-ready static deploy.',
+        'Built Airesumedraft resume builder with live preview and instant PDF export.\nIntegrated Google AdSense and Hostinger static deploy for airesumedraft.com.',
     },
   ],
   education: [

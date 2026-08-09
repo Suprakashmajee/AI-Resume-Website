@@ -30,11 +30,11 @@ export default function Footer() {
                 <FileText className="h-5 w-5" />
               </span>
               <span className="font-display text-xl font-bold">
-                DigiShops <span className="text-[var(--accent-bright)]">Resume</span>
+                Airesumedraft <span className="text-[var(--accent-bright)]">Resume</span>
               </span>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-white/70">
-              AI-assisted resume builder for digishops.in — live preview, PDF export, and AdSense-ready
+              AI-assisted resume builder for airesumedraft.com — live preview, PDF export, and AdSense-ready
               layout for monetization after Google approval.
             </p>
             <div className="space-y-3 text-sm">
@@ -88,7 +88,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} DigiShops · digishops.in</p>
+          <p>© {new Date().getFullYear()} Airesumedraft · airesumedraft.com</p>
           <p>AdSense-ready · Hostinger static deploy</p>
         </div>
       </div>

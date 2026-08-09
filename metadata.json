@@ -1,6 +1,6 @@
 {
-  "name": "DigiShops AI Resume",
-  "description": "AI-assisted resume builder with live preview and instant PDF download.",
+  "name": "Airesumedraft AI Resume",
+  "description": "AI-assisted resume builder with live preview and instant PDF download for airesumedraft.com.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
