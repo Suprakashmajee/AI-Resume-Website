@@ -22,7 +22,7 @@ import {
 } from '../types';
 import { polishText } from '../utils/aiPolish';
 
-const STORAGE_KEY = 'digishops_resume_v1';
+const STORAGE_KEY = 'airesumedraft_resume_v1';
 
 type Props = {
   adsReady: boolean;

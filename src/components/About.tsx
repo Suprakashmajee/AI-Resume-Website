@@ -7,7 +7,7 @@ export default function About() {
           One clear job: help you ship a better resume PDF.
         </h2>
         <p className="mt-4 max-w-2xl text-base font-medium leading-relaxed text-[var(--ink-soft)]">
-          DigiShops AI Resume keeps editing on your device, previews as you type, and exports a
+          Airesumedraft AI Resume keeps editing on your device, previews as you type, and exports a
           print-ready PDF. Optional Gemini rewriting improves summaries and bullets when you add an API key.
         </p>
 
@@ -23,7 +23,7 @@ export default function About() {
             },
             {
               title: 'Hostinger deploy',
-              body: 'Build a static site and upload hostinger_upload.zip, then point digishops.in DNS to Hostinger.',
+              body: 'Build a static site and upload hostinger_upload.zip to airesumedraft.com on Hostinger.',
             },
           ].map((item) => (
             <article key={item.title} className="border-t-2 border-[var(--accent)] pt-4">

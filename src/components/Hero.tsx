@@ -20,7 +20,7 @@ export default function Hero() {
             className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white/60 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[var(--accent)]"
           >
             <Sparkles className="h-3.5 w-3.5" />
-            DigiShops · AI Resume
+            Airesumedraft · AI Resume
           </motion.p>
 
           <motion.h1
@@ -29,7 +29,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.05 }}
             className="font-display max-w-3xl text-4xl font-bold leading-[1.08] tracking-tight text-[var(--ink)] sm:text-5xl md:text-6xl"
           >
-            DigiShops
+            Airesumedraft
             <span className="mt-2 block text-[var(--accent)]">Build a resume that gets read.</span>
           </motion.h1>
 
@@ -40,7 +40,7 @@ export default function Hero() {
             className="mt-6 max-w-xl text-base font-medium leading-relaxed text-[var(--ink-soft)] sm:text-lg"
           >
             Fill in your details, polish bullets with AI, preview live, and download a clean PDF —
-            ready for Hostinger on digishops.in.
+            hosted on airesumedraft.com.
           </motion.p>
 
           <motion.div
@@ -83,7 +83,7 @@ export default function Hero() {
                 A sharp professional summary appears here after you type — or let AI tighten your wording.
               </p>
               <p className="pt-2 text-[11px] font-extrabold uppercase tracking-[0.16em] text-gray-500">Experience</p>
-              <p className="font-semibold text-gray-900">Product Builder — DigiShops</p>
+              <p className="font-semibold text-gray-900">Product Builder — Airesumedraft</p>
               <ul className="list-disc space-y-1 pl-5 text-gray-600">
                 <li>Shipped tools people actually use</li>
                 <li>PDF export, live preview, clean layouts</li>

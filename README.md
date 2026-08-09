@@ -1,6 +1,6 @@
-# DigiShops AI Resume
+# Airesumedraft AI Resume
 
-AI-assisted resume builder for **[digishops.in](https://digishops.in)** — live preview, optional Gemini polish, PDF download, Hostinger zip deploy, and Google AdSense hooks.
+AI-assisted resume builder for **[airesumedraft.com](https://airesumedraft.com)** — live preview, optional Gemini polish, PDF download, Hostinger zip deploy, and Google AdSense.
 
 ## Quick start
 
@@ -17,55 +17,38 @@ Open http://localhost:3000
 | Variable | Purpose |
 |---|---|
 | `GEMINI_API_KEY` | Optional. Enables real AI rewrite for summary/bullets |
-| `VITE_ADSENSE_CLIENT_ID` | Google AdSense publisher ID (`ca-pub-…`) |
+| `VITE_ADSENSE_CLIENT_ID` | Google AdSense publisher ID (default `ca-pub-9146006984034713`) |
 | `VITE_ADSENSE_SLOT_TOP` | Top banner ad unit slot |
 | `VITE_ADSENSE_SLOT_SIDEBAR` | Sidebar ad unit slot |
-| `VITE_APP_URL` | Canonical site URL (`https://digishops.in`) |
+| `VITE_APP_URL` | Canonical site URL (`https://airesumedraft.com`) |
 
-## Build & Hostinger upload
+## Deploy to airesumedraft.com (Hostinger)
+
+Your domain is already hosted on Hostinger. Replace files:
 
 ```bash
 npm run deploy:prepare
 ```
 
-This creates `hostinger_upload.zip` from the production `dist/` folder.
+1. hPanel → **airesumedraft.com** → File Manager → `public_html`  
+2. Clear old site files  
+3. Upload & extract `hostinger_upload.zip`  
+4. Visit https://airesumedraft.com  
 
-1. Log in to Hostinger → **Websites** → your site → **File Manager**
-2. Open `public_html` (empty it if it still shows a default/parking page)
-3. Upload `hostinger_upload.zip` and extract it so `index.html` is inside `public_html`
-4. Visit your domain
-
-## Connect digishops.in
-
-Your domain currently shows a **GoDaddy parking lander** and uses **Cloudflare** nameservers.
-
-### Option A — Host on Hostinger (recommended if you already use Hostinger like Bill Store)
-
-1. In Hostinger, add/attach domain `digishops.in`
-2. In Cloudflare DNS for digishops.in, set:
-   - `A` record `@` → Hostinger shared IP (from Hostinger panel)
-   - `CNAME` `www` → `@` or Hostinger hostname
-3. Turn **Proxy** off temporarily while verifying, or keep Proxied after SSL works
-4. In Hostinger SSL, enable free SSL
-
-### Option B — Keep Cloudflare Pages / other static host
-
-Point Cloudflare to your static host per their docs; upload the same `dist/` contents.
+Full steps: see [DEPLOY.md](./DEPLOY.md).
 
 ## Google AdSense
 
-Publisher ID **`ca-pub-9146006984034713`** is already wired in `index.html` and `src/adsense.ts` (Auto ads script).
+Publisher ID **`ca-pub-9146006984034713`** is wired in `index.html` and `src/adsense.ts`.
 
-1. In AdSense, add/verify site `digishops.in`
-2. (Optional) Create Display ad units and set slot IDs for fixed banners:
+1. Verify site `airesumedraft.com` in AdSense  
+2. (Optional) Create Display ad units and set slot IDs:
 
 ```bash
 VITE_ADSENSE_SLOT_TOP=1234567890
 VITE_ADSENSE_SLOT_SIDEBAR=0987654321
 npm run deploy:prepare
 ```
-
-Without slot IDs, Auto ads can still fill inventory after Google approval; placeholder boxes mark reserved banner spots.
 
 ## Scripts
 
@@ -76,7 +59,3 @@ Without slot IDs, Auto ads can still fill inventory after Google approval; place
 | `npm run lint` | TypeScript check |
 | `npm run zip:hostinger` | Zip `dist/` for Hostinger |
 | `npm run deploy:prepare` | Build + zip |
-
-## Note about the original empty repo
-
-This repository previously contained only a README. The resume app was scaffolded here so you can review, deploy to digishops.in, and wire AdSense. If you have a different AI Studio export, replace these files with yours and keep the AdSense + deploy helpers.

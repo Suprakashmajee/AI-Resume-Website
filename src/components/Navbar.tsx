@@ -21,7 +21,7 @@ export default function Navbar() {
             <FileText className="h-5 w-5" />
           </span>
           <span className="font-display text-xl font-bold tracking-tight">
-            DigiShops <span className="text-[var(--accent)]">Resume</span>
+            Airesumedraft <span className="text-[var(--accent)]">Resume</span>
           </span>
         </button>
 
