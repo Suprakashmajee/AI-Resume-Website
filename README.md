@@ -54,19 +54,18 @@ Point Cloudflare to your static host per their docs; upload the same `dist/` con
 
 ## Google AdSense
 
-1. Create/approve account at [Google AdSense](https://www.google.com/adsense/)
-2. Add site `digishops.in` and wait for approval
-3. Create Display ad units; copy **publisher ID** and **slot IDs**
-4. Put them in `.env.local` / Hostinger build env, then rebuild:
+Publisher ID **`ca-pub-9146006984034713`** is already wired in `index.html` and `src/adsense.ts` (Auto ads script).
+
+1. In AdSense, add/verify site `digishops.in`
+2. (Optional) Create Display ad units and set slot IDs for fixed banners:
 
 ```bash
-VITE_ADSENSE_CLIENT_ID=ca-pub-xxxxxxxx
 VITE_ADSENSE_SLOT_TOP=1234567890
 VITE_ADSENSE_SLOT_SIDEBAR=0987654321
 npm run deploy:prepare
 ```
 
-Until IDs are set, the site shows labeled ad placeholders (layout ready).
+Without slot IDs, Auto ads can still fill inventory after Google approval; placeholder boxes mark reserved banner spots.
 
 ## Scripts
 
